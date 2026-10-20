@@ -1,0 +1,14 @@
+﻿Factor_ID,Factor_Name,Description,Operator_Error
+1,Machine Breakdown,"Unplanned failure of mixers, filling machines, wrapping units, or labeling systems.",0
+2,Preventive Maintenance,"Planned maintenance windows for cleaning, lubrication, calibration, or replacement of parts.",0
+3,Changeover Delay,Extended setup or retooling time when switching between products or packaging formats.,1
+4,Raw Material Shortage,"Delayed or missing supply of raw materials such as detergents, resins, or fragrances.",0
+5,Packaging Material Defect,"Defective bottles, caps, pouches, or labels causing jams or stoppages on packaging lines.",0
+6,Quality Inspection Hold,Production halted while QA verifies product samples or addresses off-spec batches.,0
+7,Cleaning / Sanitation Cycle,Mandatory cleaning or sanitation cycles between product runs or shifts.,0
+8,Utilities Failure,"Power fluctuation or loss of compressed air, chilled water, or steam required for production.",0
+9,Sensor / PLC / Software Fault,"PLC or SCADA system fault, printer malfunction, or automation software error.",0
+10,Operator Mistake,Incorrect setup parameters or SOP deviation by operator leading to line stoppage.,1
+11,Safety Lockout / Emergency Stop,"Safety incident, E-stop activation, or lockout/tagout procedures halting production.",1
+12,Scheduling / Coordination Delay,"Delays caused by poor communication or coordination between planning, maintenance, and operations.",1
+13,Other,Uncategorized or rare causes not captured under standard downtime factors.,0

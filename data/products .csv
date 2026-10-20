@@ -1,0 +1,5 @@
+Product_ID,Product_Name,Description,Category,Size,Min_Batch_Time
+PRD001,EcoWash Liquid Detergent,"A biodegradable, plant-based liquid detergent designed for household cleaning with reduced chemical content and minimal environmental impact.",Eco-Cleaning Supplies,6000L,8
+PRD002,BioWipe Cleaning Sheets,Disposable yet biodegradable surface cleaning wipes made from natural fibers and infused with non-toxic cleaning solutions.,Eco-Cleaning Supplies,50000 sheets,7
+PRD003,GreenFoam Hand Soap,An eco-friendly foaming hand soap produced from organic oils and packaged in recyclable containers.,Eco-Cleaning Supplies,5000L,6
+PRD004,RePack Recycled Packaging Film,"Flexible packaging material made from post-consumer recycled plastics used for wrapping, bottling, and labeling products.",Recyclable Packaging,10000m film,8
