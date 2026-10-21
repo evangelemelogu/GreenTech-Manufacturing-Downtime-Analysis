@@ -132,6 +132,7 @@ Supports investigation of days with multiple batch assignments and the associate
 
 The cards on this page describe its scheduling-focused scope. They should not be compared directly with the full production totals without checking the underlying filters and measure definitions.
 
+The static preview shows the first visible rows. In Power BI Desktop, scroll within the table or use the Operator slicer to explore additional operators.
 ![GreenTech Operator Scheduling](images/dashboard_3.png)
 
 ## Recommended Actions
