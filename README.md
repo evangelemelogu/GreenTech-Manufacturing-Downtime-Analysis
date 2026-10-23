@@ -1,14 +1,28 @@
 # GreenTech Manufacturing Downtime Analysis
 
-### Understanding where production time is lost and where operational improvements should begin
+![GreenTech project header](images/greentech-banner.svg)
 
-Production delays can look like a machine problem until the underlying records tell a different story.
+### Where production time is lost, and what operations should review first
 
-For this project, I analysed GreenTech’s production batches and downtime records to understand which interruptions occurred most often, which consumed the most time, and how production scheduling and operator assignments influenced the patterns.
+When a production batch runs late, the total hours tell only part of the story. The more useful question is what interrupted the work, how often it happened, and whether the same issue kept returning.
 
-Using SQL Server and Power BI, I connected the detailed records to three dashboard pages and an executive presentation, translating the findings into practical priorities for operations management.
+That was the focus of my GreenTech project. I used SQL Server and Power BI to investigate production batches and downtime records from March to August 2025. I compared interruption frequency with time lost, examined product and operator patterns, and used the findings to develop practical priorities for an operations review.
 
-[View Executive Presentation](presentation/presentation_GreenTech_Downtime_Analysis.pdf) · [Explore SQL Analysis](sql/sql_GreenTech_Manufacturing_Analysis.sql) · [Download Power BI Report](power-bi/GreenTech_Downtime_Analysis.pbix)
+The analysis covers **645 production batches**, of which **363 recorded downtime**. Across those records, the accumulated loss was **31,310 minutes**, approximately **521.83 hours**.
+
+**[Read the full portfolio case study](https://evangelemelogu.github.io/data-analytics-portfolio/greentech.html)** | [Executive presentation](presentation/presentation_GreenTech_Downtime_Analysis.pdf) | [SQL analysis](sql/sql_GreenTech_Manufacturing_Analysis.sql) | [Power BI report](power-bi/GreenTech_Downtime_Analysis.pbix)
+
+## Executive Summary
+
+| What stood out | What it means for an operations review |
+|---|---|
+| **56.28% of batches recorded downtime** | Investigate recurring causes across production, rather than reviewing each late batch in isolation. |
+| **Cleaning: about 55 hours; coordination: about 50 hours; materials: about 46 hours** | Examine preparation, handovers and material readiness alongside maintenance. |
+| **GreenFoam Hand Soap: about 191 hours** | Start a product-level investigation, with production volume and batch requirements considered. |
+| **70.14% of downtime duration was classified as non-operator-related** | Operator coaching should form part of a broader process review. |
+| **April led on logged frequency; August led on duration** | Track counts and time together. A lower event count can still conceal lengthy delays. |
+
+**Jump to:** [Approach](#analytical-approach) | [Findings](#key-findings) | [Dashboards](#dashboard-previews) | [Recommendations](#recommended-actions) | [Files](#repository-contents)
 
 ## Business Questions
 
@@ -24,7 +38,7 @@ The analysis focused on five questions:
 
 | Area | Coverage |
 |---|---|
-| Reporting period | March–August 2025 |
+| Reporting period | March - August 2025 |
 | Production batches | 645 |
 | Batches with recorded downtime | 363 |
 | Logged downtime records | 885 |
@@ -34,7 +48,7 @@ The analysis focused on five questions:
 | Dashboard pages | 3 |
 | Tools | SQL Server, Power BI, Power Query and DAX |
 
-**Counting rule:** the 885 logged records include 10 zero-minute entries. The SQL event analysis excludes these entries when counting positive-duration downtime events. The dashboard’s “Logged Downtime Records” card retains the full logged count.
+**Counting rule:** the 885 logged records include 10 zero-minute entries. The SQL event analysis excludes these entries when counting positive-duration downtime events. The dashboard's "Logged Downtime Records" card retains the full logged count.
 
 **Time convention:** 521.83 hours equals approximately 21.74 continuous 24-hour days. This is accumulated downtime, rather than a count of calendar days when the factory was closed.
 
@@ -137,6 +151,8 @@ The static preview shows the first visible rows. In Power BI Desktop, scroll wit
 
 ## Recommended Actions
 
+I would begin by reviewing the leading causes with production, planning, stores and maintenance teams. The aim is to agree specific changes and monitor their effect, rather than assume that a high downtime total identifies the cause on its own.
+
 | Priority | Recommended action | What to monitor |
 |---|---|---|
 | Cleaning and changeovers | Review cleaning steps and preparation activities while maintaining required safety and quality standards | Cleaning downtime per batch and repeat interruptions |
@@ -149,6 +165,8 @@ The static preview shows the first visible rows. In Power BI Desktop, scroll wit
 These are proposed improvement actions. The project does not claim realised savings or productivity gains from implementation.
 
 ## Interpretation and Limitations
+
+The strength of this project is the connection between production records, cause information and scheduling context. The following distinctions matter when using the findings to make decisions.
 
 - Logged downtime records and positive-duration events use different counting rules.
 - Operator comparisons describe associations; they do not establish who caused an interruption.
